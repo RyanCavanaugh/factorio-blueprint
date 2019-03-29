@@ -14,6 +14,7 @@
     "decode"
   ],
   "main": "dist/factorio-blueprint.min.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha",
     "prepublish": "webpack -p && npm test"
@@ -31,19 +32,22 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^11.12.0",
+    "@types/prettyjson": "0.0.28",
+    "@types/victor": "^1.1.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "mocha": "^5.1.1",
+    "prettyjson": "^1.2.1",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3333",
+    "victor": "^1.1.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "zlib": "^1.0.5",
-    "prettyjson": "^1.2.1",
-    "victor": "^1.1.0"
+    "zlib": "^1.0.5"
   },
   "repository": {
     "type": "git",
