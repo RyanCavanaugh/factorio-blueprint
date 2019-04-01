@@ -53,7 +53,7 @@ export default class Blueprint {
   }
 
   // Load blueprint from an existing one
-  load(data: any, opt: BlueprintOptions = { fixEntityData: false }) {
+  load(data: string | object, opt: BlueprintOptions = { fixEntityData: false }) {
     if (typeof data === 'string') {
       const version = data.slice(0, 1);
       data = util.decode[version](data);
