@@ -31,7 +31,7 @@ export default class Blueprint {
   version: string;
   checkWithEntityData: boolean;
 
-  constructor(data : any, opt: BlueprintOptions = {}) {
+  constructor(data: any, opt: BlueprintOptions = {}) {
     this.name = 'Blueprint';
     this.icons = []; // Icons for Blueprint (up to 4)
     this.entities = []; // List of all entities in Blueprint
@@ -49,8 +49,7 @@ export default class Blueprint {
     return prettyJSON.render(this.toObject().blueprint, {
       noAlign: true,
       numberColor: 'magenta'
-    } as prettyJSON.RendererOptions);
-    //   ^ remove when DefinitelyTyped updates
+    });
   }
 
   // Load blueprint from an existing one
@@ -99,7 +98,7 @@ export default class Blueprint {
     return this;
   }
 
-  placeBlueprint(bp : Blueprint, position: Position, rotations: number, allowOverlap: boolean) { // rotations is 0, 1, 2, 3 or any of the Blueprint.ROTATION_* constants.
+  placeBlueprint(bp: Blueprint, position: Position, rotations: number, allowOverlap: boolean) { // rotations is 0, 1, 2, 3 or any of the Blueprint.ROTATION_* constants.
     const entitiesCreated = []
     bp.entities.forEach(ent => {
       const data = ent.getData();
@@ -242,7 +241,7 @@ export default class Blueprint {
   bottomRight() { return this.getPosition('bottomRight', Math.max, Math.max); }
 
   // Center all entities
-  fixCenter(aroundPoint) {
+  fixCenter(aroundPoint: { x: number; y: number; }) {
     if (!this.entities.length) return this;
 
     let offsetX = aroundPoint ? -aroundPoint.x : -Math.floor(this.center().x / 2) * 2;
