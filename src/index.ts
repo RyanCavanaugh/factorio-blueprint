@@ -55,9 +55,11 @@ export default class Blueprint {
   // Load blueprint from an existing one
   load(data: string | object, opt: BlueprintOptions = { fixEntityData: false }) {
     if (typeof data === 'string') {
+      console.log("Data: " + data);
       const version = data.slice(0, 1);
       data = util.decode[version](data);
     }
+    console.log(JSON.stringify(data, undefined, 2));
     return this.fillFromObject(data, opt);
   }
 
