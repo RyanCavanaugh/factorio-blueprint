@@ -243,7 +243,7 @@ const DEFAULT_ENTITIES: EntityMap = { // ADD MORE (vanilla) AS YOU PLEASE (or mo
     type: Type.Tile
   },
   landfill: {
-    type: Type.Item
+    type: Type.Tile
   },
   concrete: {
     type: Type.Tile
@@ -765,7 +765,19 @@ const DEFAULT_ENTITIES: EntityMap = { // ADD MORE (vanilla) AS YOU PLEASE (or mo
     type: Type.Fluid
   },
 
+  basic_oil_processing: {
+    type: Type.Recipe
+  },
   advanced_oil_processing: {
+    type: Type.Recipe
+  },
+  heavy_oil_cracking: {
+    type: Type.Recipe
+  },
+  light_oil_cracking: {
+    type: Type.Recipe
+  },
+  coal_liquefaction: {
     type: Type.Recipe
   },
 
